@@ -48,7 +48,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(svg|png|jpg|pdf|jpeg)$/,
+        test: /\.(svg|png|jpg|pdf|jpeg|ico)$/,
         type: 'asset/resource', 
       },
     ]
@@ -59,9 +59,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin(
-      {title: "personal-website",
+      {title: "my personal-website",
       filename: 'index.html',
-      template: 'public/index.html'
+      template: 'public/index.html',
+
 
       }
     ),

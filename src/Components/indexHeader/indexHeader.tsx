@@ -41,7 +41,7 @@ const IndexHeader:React.FC = () => {
     window.location.hash = hashValue
   }
   // const indexNameList= ['Side Project', 'Interesting CSS Effects', "Contact me"]
-  const indexNameList = [{indexName: "Contact me", url: "/contact"}]
+  const indexNameList = [{indexName: "Contact", url: "/contact"}]
   const createIndex = ({indexName, url}) => {
     return <div className="indexContainer">
         <a href={url}>{indexName}</a>
