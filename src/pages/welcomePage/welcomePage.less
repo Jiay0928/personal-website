@@ -1,0 +1,95 @@
+.welcomePageWrapper{
+  height: 90%;
+  padding-bottom: 300px;
+  .scrollDownPanel{
+    margin-top: 80px;
+    font-size: 24PX;
+    color: #41b3a3;
+    font-weight: 450;
+  }
+
+}
+.welcomePage{
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+   
+    justify-content: space-between;
+
+    .selfIntro{
+        flex: 1;
+        text-align: left;
+        width: 100%;
+        max-width: 600px;
+        
+        .firstwordWrap{
+            font-size: 40px;
+            font-weight: 800;
+            color:#E27D60;
+            padding: 8px 20px
+         }
+        .nameWrap{
+            font-size: 120px;
+            font-weight: 700;
+            color:#0a221f;
+            padding-left: 10px;
+
+        }
+        .introWrap{
+            font-size: 28px;
+            font-weight: 450;
+            color:#4c6663;
+            padding: 40px 20px; 
+
+
+        }
+    }
+    .PictureContainer{
+        flex: 1;
+        
+        max-width: 500px;
+        margin-left: 100px;
+        
+        // background-color: #0a221f;
+        .pictureWrapper{
+            width: 550px;
+            height: 100%;
+            position: relative;
+        
+        }
+        
+        
+        img{
+            height: 500px;
+            z-index: 999;
+            position: relative
+        }
+        .photoDecro{
+            background-color: #41b3a3;
+            position: absolute;
+            top: 0px;
+            left: 92px;
+            transform: rotate(-30deg);
+            height: 500px;
+            width: 350px;
+            z-index: 0;
+            animation: rotate 4s linear infinite;
+            
+           
+        }
+        @keyframes rotate {
+            0% {
+              transform: rotate(-28deg);
+            }
+            50% {
+              transform: rotate(-24deg);
+            }
+            100% {
+              transform: rotate(-28deg);
+            }
+          }
+
+    }
+    
+
+}
