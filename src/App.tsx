@@ -5,6 +5,7 @@ import { WelcomePage } from './pages/welcomePage/welcomePage';
 import MainPage from './pages/mainPage/mainPage';
 import { Switch,  Route} from "react-router-dom";
 import ContactPage from './pages/contactPage/contactPage';
+import SideProjectPage from './pages/SideProjectPage/sideProjectPage';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Switch>
           <Route path="/mainPage" ><MainPage/></Route>
           <Route path="/contact" ><ContactPage/></Route>
+          <Route path="/sideproject" ><SideProjectPage/></Route>
           <Route path="/" ><WelcomePage/></Route>
           
 

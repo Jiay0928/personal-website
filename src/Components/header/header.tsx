@@ -10,14 +10,8 @@ export const Header:React.FC = () => {
 
   }
   const download=()=>{
-    const a = document.createElement('a')
-    var url:string = encodeURI('/jiayingcui.pdf')
-    a.href = url
-    a.download = url.split('/').pop()!
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-
+    window.open('https://s3.amazonaws.com/jiayingcui.com/JiayingCui.pdf')
+    
   }
   return (
     <div className='header'>

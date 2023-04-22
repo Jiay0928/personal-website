@@ -9,7 +9,7 @@ const ContactPage = () => {
         <div className="contactContainer">
            <EmailIcon className='icon' fontSize='large' style={{color: '#41b3a3'}} />
            <div>
-           email: cuijy100@gmail.com
+           Email: cuijy100@gmail.com
            </div>
             
         </div>
