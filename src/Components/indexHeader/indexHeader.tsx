@@ -32,7 +32,7 @@ const IndexHeader:React.FC = () => {
   }
   useEffect(
     ()=>{
-      window.addEventListener("scroll", throttle(handleScroll, 50));
+      window.addEventListener("scroll", throttle(handleScroll, 20));
       console.log(location.pathname)
     },[]
   )

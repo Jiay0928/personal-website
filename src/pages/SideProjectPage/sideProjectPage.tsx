@@ -6,24 +6,24 @@ import SideProjectContainer from '../../Components/sideProejctContainer/sideProj
 import { fetchSideProject } from './model'
 
 const SideProjectPage = () => {
-  const [projectList, setProjectList] = useState([])
-  useEffect(() => {
+  // const [projectList, setProjectList] = useState([])
+  // useEffect(() => {
     
-    fetchSideProject().then((data) =>  {console.log(data)
-    setProjectList(data.data)}
+  //   fetchSideProject().then((data) =>  {console.log(data)
+  //   setProjectList(data.data)}
 
 
-    ).catch((error) => console.log
-    )
+  //   ).catch((error) => console.log
+  //   )
   
     
-  }, [])
+  // }, [])
   
   return (
     <div>
     <IndexHeader/>
     <div className="sideProjectPage">
-       {projectList.map(project => SideProjectContainer(project))}
+       {projects.map(project => SideProjectContainer(project))}
         
     </div>
     

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import VideoComponent from '../videoComponent/videoComponent'
 import "./sideProjectContainer.less"
 type Props = {
     title:string,
@@ -6,16 +7,19 @@ type Props = {
     desc: string,
     date: string,
     keyPoints: string[],
-    videoLink: string,
+    videoLink: string | null|undefined,
     githubLink: string
 }
 
 const SideProjectContainer = (props:Props) => {
+  const [open, setOpen] = useState(false)
+  const openModelHandler = () => {
+    setOpen(true)
+  }
   return (
     <div className='sideProjectContainer'>
-        <div className="upperContainer">
-
         
+        <div className="upperContainer">
         <div className="title">
             {props.title}
         </div>
@@ -36,13 +40,15 @@ const SideProjectContainer = (props:Props) => {
         </div>
         <div className="lowerContainer">
         <div className="tags">
-            {props.tags.map(tag => <div className='tag' key={tag}>{tag}</div>)}
+            {props.tags.map(tag => <div className='tag' key={tag}>#{tag}</div>)}
         </div>
         <div className='linkContainer'>
-            <div style={{width: 100}} className='linkButton'>
+            {props.videoLink && <div style={{width: 100}} className='linkButton' onClick={()=>setOpen(true)}>
                 video
-            </div>
-            <div style={{width: 120}}  className='linkButton'>
+            </div> 
+            }
+            <VideoComponent videoUrl={props.videoLink!} open={open} setOpen={setOpen} title={props.title}/>
+            <div style={{width: 120}} onClick={()=> window.open(props.githubLink)} className='linkButton'>
                 github repo
             </div>
         </div>
