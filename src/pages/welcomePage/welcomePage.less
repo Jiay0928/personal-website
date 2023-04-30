@@ -1,11 +1,12 @@
 .welcomePageWrapper{
   height: 90%;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
   .scrollDownPanel{
     margin-top: 80px;
     font-size: 24PX;
     color: #41b3a3;
     font-weight: 450;
+    animation: upAndDown 1.5s linear infinite;
     
   }
 
@@ -89,6 +90,18 @@
               transform: rotate(-28deg);
             }
           }
+          @keyframes upAndDown {
+            0% {
+              transform: translateY(3px);
+            }
+            50% {
+              transform: translateY(-6px);
+            }
+            100% {
+              transform: translateY(3px);
+            }
+          }
+
 
     }
     

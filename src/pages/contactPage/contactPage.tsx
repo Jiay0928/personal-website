@@ -7,10 +7,17 @@ const ContactPage = () => {
     <div>
         <IndexHeader/>
         <div className="contactContainer">
+          <div className="emailContainer">
            <EmailIcon className='icon' fontSize='large' style={{color: '#41b3a3'}} />
            <div>
-           Email: cuijy100@gmail.com
+           Email: cuijy100@gmail.com 
+
            </div>
+           </div>
+           <div className='copyContainer' onClick={()=> {window.navigator.clipboard.writeText("cuijy100@gmail.com").then(function(x) {
+            alert("Email has been copied");
+            })}}
+         >copy</div>
             
         </div>
         

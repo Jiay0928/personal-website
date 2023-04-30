@@ -62,6 +62,9 @@ const MainPage:React.FC = () => {
                   </h4>
                   <ol>
                     <li>
+                    	In charge of the new database model design for the new grpc endpoint data
+                    </li>
+                    <li>
                     	Updated a gRPC API to allow users to do fuzzy filtering search on information in the database
                     </li>
                     <li>

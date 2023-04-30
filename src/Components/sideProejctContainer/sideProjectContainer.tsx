@@ -8,16 +8,18 @@ type Props = {
     date: string,
     keyPoints: string[],
     videoLink: string | null|undefined,
-    githubLink: string
+    githubLink: string,
+    backendLink: string | null|undefined,
 }
 
 const SideProjectContainer = (props:Props) => {
   const [open, setOpen] = useState(false)
-  const openModelHandler = () => {
-    setOpen(true)
-  }
+  
   return (
-    <div className='sideProjectContainer'>
+    <div className='sideProjectContainer' onMouseLeave={(e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        e.currentTarget.scrollTop = 0
+
+    }}>
         
         <div className="upperContainer">
         <div className="title">
@@ -48,9 +50,16 @@ const SideProjectContainer = (props:Props) => {
             </div> 
             }
             <VideoComponent videoUrl={props.videoLink!} open={open} setOpen={setOpen} title={props.title}/>
-            <div style={{width: 120}} onClick={()=> window.open(props.githubLink)} className='linkButton'>
+            {props.backendLink?[<div style={{width: 140}} onClick={()=> window.open(props.githubLink)} className='linkButton'>
+                Frontend repo
+            </div>,
+            <div style={{width: 140}} onClick={()=> window.open(props.backendLink!)} className='linkButton'>
+                Backend repo
+            </div>]
+            
+            :<div style={{width: 120}} onClick={()=> window.open(props.githubLink)} className='linkButton'>
                 github repo
-            </div>
+            </div>}
         </div>
         </div>
         
