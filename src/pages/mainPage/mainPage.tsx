@@ -5,8 +5,13 @@ import profile_img from '../../../res/profile.jpeg'
 import './mainPage.less'
 
 const MainPage:React.FC = () => {
+  function preload_image(im_url) {
+    let img = new Image();
+    img.src = im_url;
+  }
   useEffect(() => {
     window.scrollTo(0, 0);
+    preload_image(profile_img)
   }, []);
   return (
     <div className='mainPage'>

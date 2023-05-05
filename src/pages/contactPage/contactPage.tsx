@@ -14,10 +14,10 @@ const ContactPage = () => {
 
            </div>
            </div>
-           <div className='copyContainer' onClick={()=> {window.navigator.clipboard.writeText("cuijy100@gmail.com").then(function(x) {
+           {/* <div className='copyContainer' onClick={()=> {window.navigator.clipboard.writeText("cuijy100@gmail.com").then(function(x) {
             alert("Email has been copied");
             })}}
-         >copy</div>
+         >copy</div> */}
             
         </div>
         

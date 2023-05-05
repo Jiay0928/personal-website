@@ -33,7 +33,6 @@ const IndexHeader:React.FC = () => {
   useEffect(
     ()=>{
       window.addEventListener("scroll", throttle(handleScroll, 20));
-      console.log(location.pathname)
     },[]
   )
   const openHashLinkThenClose = (hashValue:string) => {
